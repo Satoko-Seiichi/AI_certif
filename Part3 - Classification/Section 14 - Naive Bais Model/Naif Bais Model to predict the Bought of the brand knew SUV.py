@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 #IMPORTING THE DATA SET
-data_set = pd.read_csv(r"C:\Users\youne\Desktop\AI_certif\Part3 - Classification\K-NN Model\Social_Network_Ads.csv")
+data_set = pd.read_csv(r"C:\Users\youne\Desktop\AI_certif\Part3 - Classification\Section 11 - K-NN Model\Social_Network_Ads.csv")
 X = data_set.iloc[:,:-1].values
 y = data_set.iloc[:,-1].values
 
@@ -18,9 +18,9 @@ X_train = sc_x.fit_transform(X_train)
 X_test = sc_x.transform(X_test)
 
 
-#TRAINING THE SUPORT VECTOR MACHINE MODEL
-from sklearn.svm import SVC
-clf = SVC(kernel = 'linear', random_state = 0)
+#TRAINING THE NAIVE GUASSIAN MODEL
+from sklearn.naive_bayes import GaussianNB
+clf = GaussianNB()
 clf.fit(X_train, y_train)
 
 #PREDICTING IF THIS COSTUMER IS GOING TO BUY
