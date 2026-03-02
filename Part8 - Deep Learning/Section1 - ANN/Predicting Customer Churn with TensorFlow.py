@@ -25,10 +25,11 @@ sc_x = StandardScaler()
 X_train = sc_x.fit_transform(X_train)
 X_test = sc_x.transform(X_test)
 
+"""************************************************************************************************************************************************************************************"""
 ######### PART 2 - BUILDING THE ANN ########################
 """Initializing the ANN"""
 import tensorflow as tf
-ann = tf.keras.models.Sequential() #ann as a sequence of layers
+ann = tf.keras.models.Sequential() #Ann as a sequence of layers
 """Adding the input layer and the first hidden layer"""
 ann.add(tf.keras.layers.Dense(units = 6#how many neurons you put in the hidden layers
 ,activation = 'relu'))#this is a fully connected hidden layer
